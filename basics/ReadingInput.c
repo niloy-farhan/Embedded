@@ -7,9 +7,9 @@ int main(){
 
   printf("Enter a value: ");
 
-  scanf("%d", &i);
+  scanf("%d %s", &i, str);
 
-  printf("\n you entered: %d\n", i);
+  printf("\n you entered: %d::::%s\n", i, str);
 
   return 0;
 }
