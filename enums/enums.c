@@ -1,10 +1,17 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main() {
 
-  char myCharacter = '\n'
+  enum charracter {nn, cnn};
 
-    printf("%c", myCharacter);
+  enum charracter myCharacter = nn;
+
+  enum charracter anotherCharrecter = cnn;
+
+  bool bl = (myCharacter = anotherCharrecter);
+
+  printf("%d", bl);
 
   return 0;
 }
