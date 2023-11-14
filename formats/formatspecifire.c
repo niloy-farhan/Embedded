@@ -7,6 +7,8 @@ int main(){
   double doubleVar = 8.44e+11;
   char charVar = 'W';
 
+  float x = 2.3333444;
+
   _Bool boolVar = 0;
 
   printf("integerVar = %i\n", integerVar);
@@ -15,5 +17,6 @@ int main(){
   printf("integerVar = %g\n", doubleVar);
   printf("integerVar = %c\n", charVar);
   printf("integerVar = %i\n", boolVar);
+  printf("x = %.2f\n", x);
 
 }
