@@ -7,7 +7,7 @@ int main() {
 
   int result = 0;
 
-  result = a | b;
+  result = a & b;
 
   printf("result is %d\n", result);
 
