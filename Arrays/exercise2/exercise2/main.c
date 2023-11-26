@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
     };
     
     int y, m;
-    float subtot, total;
+    float subtot, total, subtotM;
     
     printf(" YEAR\t  RAINFALL (inches)\n\n");
     
@@ -36,5 +36,16 @@ int main(int argc, const char * argv[]) {
     }
     
     printf("\nThe yearly avarage is %.1f inches. \n\n", total/YEARS);
+    
+    printf("MONTHLY AVARAGES:\n\n");
+    printf("Jan Feb March April May Jun Jul Aug Sep Oct Nov Dec\n");
+    
+    for (m = 0; m < MONTHS; m++){
+        for(y=0, subtotM = 0; y < YEARS; y++)
+            subtotM += data[y][m];
+        
+        printf("%4.1f ", subtotM/YEARS);
+    }
+    printf("\n");
     return 0;
 }
