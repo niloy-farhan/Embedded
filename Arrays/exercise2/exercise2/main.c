@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
     int y, m;
     float subtot, total;
     
-    printf("YEAR\t\tRAINFALL (inches)\n");
+    printf(" YEAR\t  RAINFALL (inches)\n\n");
     
     for (y = 0, total = 0; y < YEARS; y++) {
         for(m = 0, subtot = 0; m < MONTHS; m++){
