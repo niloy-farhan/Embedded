@@ -11,7 +11,7 @@
 
 int main(int argc, const char * argv[]) {
     
-    float data[YEARS][MONTHS] = {
+    double data[YEARS][MONTHS] = {
         
         {4.3,4.3,4.3,3.0,2.0,1.2,0.2,0.2,0.4,2.4,3.5,6.6},
         {8.5,8.2,1.2,1.6,2.4,0.0,5.2,0.9,0.3,0.9,1.4,7.3},
@@ -27,7 +27,9 @@ int main(int argc, const char * argv[]) {
     printf("YEAR\t\tRAINFALL (inches)\n");
     
     for (y = 0, total = 0; y < YEARS; y++) {
-        for(m = 0, subtot = 0; m < MONTHS; m++)
+        for(m = 0, subtot = 0; m < MONTHS; m++){
+            subtot += data[year] [month];
+        }
     }
     return 0;
 }
