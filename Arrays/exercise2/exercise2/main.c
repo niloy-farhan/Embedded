@@ -30,6 +30,11 @@ int main(int argc, const char * argv[]) {
         for(m = 0, subtot = 0; m < MONTHS; m++){
             subtot += data[y] [m];
         }
+        
+        printf("%5d \t\t%.1f\n", 2019 + y, subtot);
+        total += subtot;
     }
+    
+    printf("\nThe yearly avarage is %.1f inches. \n\n", total/YEARS);
     return 0;
 }
