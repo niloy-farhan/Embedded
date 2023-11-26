@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
     
     for (y = 0, total = 0; y < YEARS; y++) {
         for(m = 0, subtot = 0; m < MONTHS; m++){
-            subtot += data[year] [month];
+            subtot += data[y] [m];
         }
     }
     return 0;
