@@ -21,10 +21,13 @@ int main(int argc, const char * argv[]) {
         
     };
     
-    int years, month;
+    int y, m;
     float subtot, total;
     
     printf("YEAR\t\tRAINFALL (inches)\n");
     
+    for (y = 0, total = 0; y < YEARS; y++) {
+        for(m = 0, subtot = 0; m < MONTHS; m++)
+    }
     return 0;
 }
