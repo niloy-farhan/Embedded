@@ -7,43 +7,32 @@
 
 #include <stdio.h>
 
-double DivisorData(double x, double y);
-double Divisors(double z);
-
+unsigned int DivisorData(unsigned int a, unsigned int b);
 
 int main(int argc, const char * argv[]) {
     
-    DivisorData(10, 20);
+    unsigned int a = 0;
+    unsigned int b = 0;
+    printf("Enter 1st number: ");
+    scanf("%u", &a);
+    printf("Enter 2nd number: ");
+    scanf("%u", &b);
+    
+    int gcd = DivisorData(a, b);
+    
+    printf("%d\n", gcd);
     
     return 0;
 }
 
-double Divisors( double z){
-    for( int i = 0; i <= z; i++){
-        
-    }
-};
 
-double DivisorData(double x, double y) {
-    
-    double max = 0;
-    
-    
-    if (x > y){
-        max = x;
-    } else {
-        max = y;
-    }
-    
-    double dataX[max] = 0;
-    
-    for( double i = 0; i <= max; i++){
-        if(x % i == 0){
-            
+unsigned int DivisorData(unsigned int a, unsigned int b) {
+        while (b != 0) {
+            unsigned int temp = b;
+            b = a % b;
+            a = temp;
         }
-    }
-        
-    
+        return a;
     
 };
 
