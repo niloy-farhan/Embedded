@@ -46,3 +46,18 @@ float absoluteValue(float x){
         x = -x;
     return x;
 }
+
+float squareRoot(float x) {
+    const float epsilon = .000001;
+    float guess = 1.0;
+    
+    if (x < 0) {
+        printf("Negative argument to squareRoot.\n");
+        return -1.0;
+    }
+    
+    while ( absoluteValue(guess * guess -x) >= epsilon)
+        guess = (x / guess + guess) / 2.0;
+    
+    return guess;
+}
