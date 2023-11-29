@@ -22,10 +22,18 @@ int main(int argc, const char * argv[]) {
     /* testing absolute value function*/
     result = absoluteValue(f1);
     printf("result = %.2f\n", result);
-    printf("f1 = %.2f\n", f1);
+    printf("f1 = %.2f\n\n\n", f1);
     
     result = gcd(150, 23);
-    printf("The gcd of 1500 and 25 is %f\n", result);
+    printf("The gcd of 1500 and 25 is %f\n\n\n", result);
+    
+    /*Testing squareRoot*/
+  
+    printf("%.2f\n", squareRoot(-3.0));
+    printf("%.2f\n", squareRoot(16.0));
+    printf("%.2f\n", squareRoot(24.0));
+    printf("%.2f\n", squareRoot(36.0));
+    printf("%.2f\n", squareRoot(165.0));
    
     return 0;
 }
@@ -50,14 +58,20 @@ float absoluteValue(float x){
 float squareRoot(float x) {
     const float epsilon = .000001;
     float guess = 1.0;
+    float returnValue = 0.0;
     
     if (x < 0) {
         printf("Negative argument to squareRoot.\n");
-        return -1.0;
+        returnValue = -1.0;
     }
     
-    while ( absoluteValue(guess * guess -x) >= epsilon)
-        guess = (x / guess + guess) / 2.0;
+    if (returnValue != -1.0) {
+        
+        while ( absoluteValue(guess * guess -x) >= epsilon)
+            guess = (x / guess + guess) / 2.0;
+        
+        returnValue = guess;
+    }
     
-    return guess;
+    return returnValue;
 }
