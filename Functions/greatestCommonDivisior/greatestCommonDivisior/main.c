@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
     
     int gcd = DivisorData(a, b);
     
-    printf("%d\n", gcd);
+    printf("The greatest common divisor is: %d\n", gcd);
     
     return 0;
 }
