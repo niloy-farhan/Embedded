@@ -47,3 +47,28 @@ int checkForWin(){
     return returnValue;
     
 };
+
+void displayBoard() {
+    system("cls");
+    printf("\n\n\tTic Tac Toe \n\n");
+    printf("Player 1 (X) - Player 2 (O)\n\n\n");
+    
+    printf("        |      |       \n");
+    printf("    %C     |   %c  |   %c  \n", square[1], square[2], square[3]);
+    
+    printf("________|_______|_______");
+    printf("        |       |       ");
+    
+    printf("    %C     |   %c  |   %c  \n", square[4], square[5], square[6]);
+    
+    printf("________|_______|_______");
+    printf("        |       |       ");
+    
+    
+    printf("    %C     |   %c  |   %c  \n", square[7], square[8], square[9]);
+    printf("        |      |       \n\n");
+}
+
+void markBoard(char mark) {
+    
+}
